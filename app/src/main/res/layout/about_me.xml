@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+    <ImageView
+        android:id="@+id/im"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/dip" />
+
+    <TextView
+        android:textSize="@dimen/textsize"
+        android:id="@+id/aboutme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/im"
+        android:layout_marginTop="15dp"
+        android:text="@string/about"
+        android:textAlignment="center" />
+
+    <TextView
+        android:textSize="@dimen/textsize"
+        android:id="@+id/follow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/aboutme"
+        android:layout_marginTop="15dp"
+        android:fontFamily="casual"
+        android:text="Follow Me "
+        android:textAlignment="center"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/follow"
+        android:background="@color/browser_actions_text_color" />
+
+
+    <LinearLayout
+        android:id="@+id/ll3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/follow"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/github" />
+
+        <TextView
+            android:textSize="@dimen/textsize"
+            android:id="@+id/github"
+            android:layout_marginStart="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="openGithub"
+            android:text="Github"
+            android:textColor="@color/colorAccent"
+            android:textAlignment="center"
+            tools:ignore="UsingOnClickInXml" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll3"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/facebook" />
+
+        <TextView
+            android:textSize="@dimen/textsize"
+            android:id="@+id/fb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:onClick="openFb"
+            android:text="Facebook"
+            android:textColor="@color/colorAccent"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
